@@ -1,22 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/29 22:22:15 by abdamoha          #+#    #+#             */
+/*   Updated: 2022/09/29 22:24:42 by abdamoha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
-
-#include<stdio.h>
-
-#include <string.h>
-
-void *ft_bzero (void *str,size_t n)
+void	*ft_bzero(void *str, size_t n)
 {
-    unsigned char *s = str;
-    while (n > 0)
-    {
-        *s = 0;
+	unsigned char	*s;
 
-        s++;
-        n--;
-       
-    }
-    return (str);
+	*s = str;
+	while (n > 0)
+	{
+		*s = 0;
+		s++;
+		n--;
+	}
+	return (str);
 }
 // int main()
 //  {

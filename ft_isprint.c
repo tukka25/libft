@@ -6,12 +6,11 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:10 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:03:38 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:25:24 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-//#include<stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int x)
 {

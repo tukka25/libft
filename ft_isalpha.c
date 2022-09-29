@@ -6,12 +6,12 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:52:43 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:03:09 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:25:01 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-//#include <stdio.h>
 int	ft_isalpha(int a)
 {
 	return ((a >= 65 && a <= 90) || (a >= 97 && a <= 122));

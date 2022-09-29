@@ -6,12 +6,11 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:52:31 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:02:54 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:24:56 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-//#include<stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int a)
 {

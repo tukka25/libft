@@ -6,23 +6,22 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:46 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:04:47 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:31:15 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	i;
-	char *ndst;
-	char *nsrc;
-	
+	int		i;
+	char	*ndst;
+	char	*nsrc;
+
 	i = 0;
 	ndst = (char *)dst;
 	nsrc = (char *)src;
-
-	while(len != 0)
+	while (len != 0)
 	{
 		ndst[i] = nsrc[i];
 		i++;

@@ -6,13 +6,11 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:02 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:03:29 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:25:18 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-// #include <unistd.h>
-// #include<stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int f)
 {

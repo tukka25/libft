@@ -6,14 +6,11 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:54:57 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:31:21 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:34:40 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
-#include <string.h>
-
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -35,5 +32,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 // 	printf("%lu", strlcpy(dst, src, 5));
 // 	printf("%lu", ft_strlcpy(dst, src, 5));
-	
 // }

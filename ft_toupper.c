@@ -6,19 +6,19 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:55:20 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 17:06:09 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:36:05 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_toupper(int n)
+char	ft_toupper(int n)
 {
-    if (n >= 97 && n <= 122)
-    {
-        return (n - 32);
-    }
-    return (n);
+	if (n >= 97 && n <= 122)
+	{
+		return (n - 32);
+	}
+	return (n);
 }
 // int main()
 // {
