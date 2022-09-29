@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:20:53 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/29 22:44:28 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 }
 int main()
 {
+	int	*i;
 	
+	i = 
 }

@@ -6,12 +6,12 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:35:21 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/30 00:01:17 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
+
 
 char	*ft_strchr(const char *s, int c)
 {
