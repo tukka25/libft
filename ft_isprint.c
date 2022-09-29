@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:10 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:25:24 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/30 00:07:55 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_isprint(int x)
 {
 	return (x >= 32 && x <= 127);
 }
-// int main(){
-//     char x;
-//     x = ' ';
-//     printf("%d",ft_isprint(x));
-// }
+int main(){
+    char x;
+    x = ' ';
+    printf("%d",ft_isprint(x));
+}
