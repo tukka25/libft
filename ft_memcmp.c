@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:27 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:27:27 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/30 17:18:59 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-int main()
-{
+// int main()
+// {
 
- char str1[ ] = "Learn python from tyrtoprogram.com";
- char str2[ ] = "Learn python from tyrtoprogram.";
+//  char str1[ ] = "Learn python from tyrtoprogram.com";
+//  char str2[ ] = "Learn python from tyrtoprogram.";
 
- printf("%d",ft_memcmp(str1, str2, 32));
+//  printf("%d",ft_memcmp(str1, str2, 32));
 
-}
+// }

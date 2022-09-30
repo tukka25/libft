@@ -6,15 +6,15 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:52:52 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:25:09 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/09/30 17:24:18 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iascii(int v)
+int	ft_isascii(int c)
 {
-	return (v >= 0 && v <= 127);
+	return ((c >= 0 && c <= 127));
 }
 // int main()
 // {

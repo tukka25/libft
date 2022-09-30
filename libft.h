@@ -2,7 +2,6 @@
 # define LIBFT_H
 
 # include <stddef.h>
-#include <stdio.h>
 
 typedef struct s_list
 {
@@ -32,7 +31,7 @@ int		ft_isprint(int x);
 
 int		ft_isdigit(int f);
 
-int		ft_iascii(int v);
+int		ft_isascii(int c);
 
 int		ft_isalpha(int a);
 
@@ -55,4 +54,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 char	*strdup(const char *s1);
+
+char	*ft_strrchr(const char *s, int c);
 #endif
