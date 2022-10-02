@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 13:52:05 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 13:56:28 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,12 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-int main()
-{
-	char s[] = "";
-	// int c = ;
-	printf("%s\n",strrchr(s, 0));
-	printf("%s",ft_strrchr(s, 0));
-}
+// int main()
+// {
+// 	char s[] = "tripouille";
+// 	char s2[] = "ltripouiel";
+// 	char s3[] = "";
+// 	// int c = ;
+// 	printf("%s",strrchr(s3, 0));
+// 	printf("%s",ft_strrchr(s3, 0));
+// }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/30 20:39:49 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 15:01:41 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-char	*strdup(const char *s1);
+char	*ft_strdup(const char *s1);
 
 char	*ft_strrchr(const char *s, int c);
 #endif

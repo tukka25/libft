@@ -6,22 +6,41 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/30 17:14:13 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 14:33:31 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include "libft.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-// void	*ft_calloc(size_t count, size_t size)
-// {
-// 	int	*i;
+void	*ft_calloc(size_t count, size_t size)
+{
+	int	i;
+	int	*x;
 
-// 	i = (int *)malloc(sizeof(int));
-// }
+	i = 0;
+	size = sizeof(int);
+	x = (int *)malloc(count * sizeof(int));
+	if (x == NULL)
+		return (NULL);
+	bzero (x, size);
+	return (x);
+}
 // int main()
 // {
-// 	int	*i;
-	
-// 	i = 
+// 	int	*x;
+// 	int n,i, b;
+
+// 	n = 5;
+// 	i = 0;
+// 	b = 1;
+// 	x = ft_calloc(n, sizeof(int));
+// 	while (i < n)
+// 	{
+// 		printf("%d ",x[i]);
+// 		i++;
+// 	}
+// 	return (0);
 // }
