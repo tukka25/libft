@@ -6,11 +6,13 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:27 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/30 17:18:59 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 13:35:46 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -23,12 +25,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (n > 0)
 	{
-		if ((ns1[i] == ns2[i]) && (ns1[i] != '\0' && ns2[i] != '\0'))
+		if ((ns1[i] == ns2[i]) && (ns1[i] && ns2[i]))
 		{
 			i++;
 			n--;
 		}
-		else if ((ns1[i] == ns2[i]) && (ns1[i] != '\0' || ns2[i] != '\0'))
+		else if ((ns1[i] == ns2[i]) && (ns1[i] || ns2[i]))
 		{
 			return (0);
 		}
@@ -36,8 +38,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		{
 			return (ns1[i] - ns2[i]);
 		}
-		else
-		{
+		else {
 			return (ns2[i] - ns1[i]);
 		}
 	}
@@ -46,9 +47,15 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // int main()
 // {
 
-//  char str1[ ] = "Learn python from tyrtoprogram.com";
-//  char str2[ ] = "Learn python from tyrtoprogram.";
+// 	char s[] = {-128, 0, 127, 0};
+// 	char sCpy[] = {-128, 0, 127, 0};
+// 	char s2[] = {0, 0, 127, 0};
+// 	char s3[] = {0, 0, 42, 0};
+// //  char str1[ ] = "Learn python from tyrtoprogram.com";
+// //  char str2[ ] = "Learn python from tyrtoprogram.com";
 
-//  printf("%d",ft_memcmp(str1, str2, 32));
+//  printf("%d\n",ft_memcmp(s2, s3, 4));
+//  printf("%d",memcmp(s2, s3, 4));
+ 
 
 // }

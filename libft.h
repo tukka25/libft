@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
+/*   Updated: 2022/09/30 20:39:49 by abdamoha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -5,9 +17,9 @@
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} 		t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_atoi(const char *str);
 
@@ -15,7 +27,7 @@ int		ft_isalnum(int a);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
-void	*ft_bzero (void *str,size_t n);
+void	*ft_bzero(void *str, size_t n);
 
 char	ft_toupper(int n);
 

@@ -6,11 +6,13 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:03 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:26:40 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 13:34:50 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -31,14 +33,26 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 // int main () 
 // {
-//    const char str[] = "abdalrahmanahmedtukka";
-//    const char ch = 'n';
-//    char *ret;
+// 	const char s[] = {0, 1, 2 ,3 ,4 ,5};
+// 	const char ch = 2;
+// 	char *ret = memchr(s, ch, 4);
 
-//    //ret = memchr(str, ch, 13);
 
 //    //printf("String after %s \n", ret);
-//    printf(" %s ", ft_memchr(str, ch, 13));
+//    //printf("%s\n", ft_memchr(s, 2, 3));
+//    printf("%s", ret);
+
+//    return(0);
+// }
+
+// int main () {
+//    const char str[] = {0, 1, 2, 3, 4, 5};
+//    const char ch = 0;
+//    char *ret;
+
+//    ret = memchr(str, ch, 1);
+
+//    printf("%s\n",ret);
 
 //    return(0);
 // }

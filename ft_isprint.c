@@ -6,18 +6,23 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:10 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/30 17:18:15 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 09:20:22 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int x)
+int	ft_isprint(int c)
 {
-	return (x >= 32 && x <= 127);
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	return (0);
 }
 // int main(){
-//     char x;
-//     x = ' ';
-//     printf("%d",ft_isprint(x));
+//     char c;
+//     c = '~';
+//     printf("%d\n",ft_isprint(c));
+// 	printf("%d", isprint(c));
 // }
