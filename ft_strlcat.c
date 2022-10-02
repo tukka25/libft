@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:15 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 20:17:08 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/02 20:24:50 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,30 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	int		i;
-	size_t	g;
 	int		j;
 	char	*new_src;
 
 	j = 0;
-	g = dstsize;
 	new_src = (char *)src;
+	if (dstsize <= 0)
+		return (ft_strlen(new_src));
 	i = ft_strlen(new_src);
-	while (dst[j] != '\0' && g > 0)
+	while (dst[j] != '\0' && dstsize > 0)
 	{
 		dst[i] = new_src[j];
 		i++;
 		j++;
-		g--;
+		dstsize--;
 	}
 	dst[i] = '\0';
 	return (i);
 }
 // int main()
 // {
-//     char src[30] = "AAAAer";
-// 	char dst[30] = "Bdfgip";
+//     char src[30] = "AAAAAAAAA";
+// 	char *dst = 'b';
 
-//     printf("%zu\n",strlcat(dst, src, 1));
-//     printf("%zu\n",ft_strlcat(dst, src, 1));
+//     printf("%zu\n",strlcat(dst, src, 0));
+//    // printf("%zu\n",ft_strlcat(dst, src, 0));
 // 	//printf("%s",strcat(dst, src));
 // }
