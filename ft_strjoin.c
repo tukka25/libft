@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 15:55:05 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/03 16:40:10 by abdamoha         ###   ########.fr       */
+/*   Created: 2022/10/03 16:54:47 by abdamoha          #+#    #+#             */
+/*   Updated: 2022/10/04 14:51:42 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	int		len;
+	char	*str;
+	int		i;
+	int		j;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	j = 0;
+	len = ft_strlen(s1) + ft_strlen(s2);
+	str = (char *)malloc(len * sizeof(char) + 1);
+	if (!str)
+		return (0);
+	while (s1[i] != '\0')
+		str[j++] = s1[i++];
+	i = 0;
+	while (s2[i] != '\0')
+		str[j++] = s2[i++];
+	str[j] = '\0';
+	return (str);
 }
 // int main()
 // {
-//     char *str = "tukka";
-// printf("%d",ft_strlen(str));
-
+// 	char s1[] = "";
+// 	char s2[] = "";
+	
+// 	printf("%s", ft_strjoin(s1, s2));
+// 	return (0);
 // }

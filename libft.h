@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/03 15:08:53 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/04 14:51:33 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	ft_toupper(int n);
 
 char	ft_tolower(int n);
 
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 
 void	*ft_memset(void *str, int ch, size_t n);
 
@@ -73,4 +73,8 @@ char	*ft_strdup(const char *s1);
 char	*ft_strrchr(const char *s, int c);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	**ft_split(char const *s, char c);
 #endif
