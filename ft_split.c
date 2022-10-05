@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:50:36 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/05 17:43:32 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/05 21:57:48 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	string_len(const char *s, int j)
 	int	i;
 
 	i = 0;
-	j = 0;
 	while (s[j] != '\0')
 	{
 		if (s[j] == ' ')
@@ -26,34 +25,24 @@ int	string_len(const char *s, int j)
 	}
 	return (0);
 }
+
 char	*mem_allocation_of_strings(const char *s, char c, int len)
 {
 	int		i;
 	int		j;
-	char	*new_s;
 	char	*tmp;
 	int		count;
-	
+
 	i = 0;
 	j = 0;
 	count = 0;
-	new_s = (char *)s;
-	while (len + 1 > 0)
-	{
-		j = string_len(s, j);
+	j = string_len(s, j);
 		tmp = (char *)malloc(j * sizeof(char) + 1);
-		count = 0;
-		while (s[i] != c && s[i] != '\0')
-		{
-			//ft_memcpy(tmp, new_s, j);
-			tmp[count++] = new_s[i++];
-		}
-		tmp[count] = '\0';
-		//return (tmp);
-		len--;
-		i++;
-		//j++;
+	while (s[i] != '\0' && s[i] != c)
+	{
+		tmp[count++] = s[i++];
 	}
+	tmp[count] = '\0';
 	return (tmp);
 }
 
@@ -61,7 +50,7 @@ int	count_string(const char *s, char c)
 {
 	int		i;
 	int		len;
-	//char	c;
+
 	len = 0;
 	i = 0;
 	while (s[i] != '\0')
@@ -70,7 +59,7 @@ int	count_string(const char *s, char c)
 			len++;
 		i++;
 	}
-	return (len);
+	return (len + 1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -79,19 +68,26 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 	int		len;
 	int		j;
-	char *d = (char *)s;
 
 	len = count_string(s, c);
-	str = (char **)malloc((len + 1) * sizeof(char *) + 1);
+	str = (char **)malloc(len * sizeof(char *) + 1);
 	i = 0;
-	// mem_allocation_of_strings(s, c);
-	while (len >= 0)
+	j = 0;
+	while (*s == c)
+			s++;
+	while (*s != '\0')
 	{
-		str[i] = mem_allocation_of_strings(s, c, len);
-		len--;
-		i++;
+		while (*s && *s == c)
+			s++;
+		if (*s && *s != c)
+		{
+			str[j] = mem_allocation_of_strings(s, c, len);
+			j++;
+			while (*s && *s != c)
+				s++;
+		}
 	}
-	str[i] = NULL;
+	str[j] = NULL;
 	return (str);
 }
 
@@ -99,7 +95,8 @@ int main ()
 {
 	char	**tab;
 
-	tab = ft_split("hello world", ' ');
+	tab = ft_split(" this is", ' ');
 	printf("%s\n", tab[0]);
 	printf("%s\n", tab[1]);
+
 }
