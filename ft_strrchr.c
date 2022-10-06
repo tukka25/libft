@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 13:56:28 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/06 19:45:07 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ char	*ft_strrchr(const char *s, int c)
 // {
 // 	char s[] = "tripouille";
 // 	char s2[] = "ltripouiel";
-// 	char s3[] = "";
+// 	//char s3[] = "";
 // 	// int c = ;
-// 	printf("%s",strrchr(s3, 0));
-// 	printf("%s",ft_strrchr(s3, 0));
+// 	printf("%s",strrchr(s, 0));
+// 	printf("%s",ft_strrchr(s, 0));
 // }

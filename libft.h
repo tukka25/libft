@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/04 14:51:33 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:53:48 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 
 char	**ft_split(char const *s, char c);
+
+char	*ft_strtrim(char const *s1, char const *set);
+
 #endif

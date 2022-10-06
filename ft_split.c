@@ -6,27 +6,27 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:50:36 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/05 21:57:48 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:09:03 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	string_len(const char *s, int j)
+int	string_len(const char *s, int j, char c)
 {
 	int	i;
 
 	i = 0;
 	while (s[j] != '\0')
 	{
-		if (s[j] == ' ')
+		if (s[j] == c)
 			return (j);
 		j++;
 	}
 	return (0);
 }
 
-char	*mem_allocation_of_strings(const char *s, char c, int len)
+char	*mem_allocation_of_strings(const char *s, char c)
 {
 	int		i;
 	int		j;
@@ -36,8 +36,10 @@ char	*mem_allocation_of_strings(const char *s, char c, int len)
 	i = 0;
 	j = 0;
 	count = 0;
-	j = string_len(s, j);
-		tmp = (char *)malloc(j * sizeof(char) + 1);
+	j = string_len(s, j, c);
+	tmp = (char *)malloc(j * sizeof(char) + 1);
+	if (!tmp)
+		return (NULL);
 	while (s[i] != '\0' && s[i] != c)
 	{
 		tmp[count++] = s[i++];
@@ -73,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	str = (char **)malloc(len * sizeof(char *) + 1);
 	i = 0;
 	j = 0;
+	if (s == NULL)
+		return (NULL);
 	while (*s == c)
 			s++;
 	while (*s != '\0')
@@ -81,22 +85,26 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			str[j] = mem_allocation_of_strings(s, c, len);
-			j++;
+			str[j++] = mem_allocation_of_strings(s, c);
 			while (*s && *s != c)
 				s++;
 		}
 	}
 	str[j] = NULL;
+	//free (str);
 	return (str);
 }
 
-int main ()
-{
-	char	**tab;
+// int main ()
+// {
+// 	char	**tab;
+// 	int		i;
 
-	tab = ft_split(" this is", ' ');
-	printf("%s\n", tab[0]);
-	printf("%s\n", tab[1]);
-
-}
+// 	i = 0;
+// 	tab = ft_split("   my   name  is   mohamed ", ' ');
+// 	while(tab[i] != NULL)
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		i++;
+// 	}
+// }
