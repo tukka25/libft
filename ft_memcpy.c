@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:17 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:30:53 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/07 19:08:22 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 //     char src[] = "tukka";
 
 //         printf("%s", ft_memcpy(dst, src, sizeof (src)));
-        
 // }

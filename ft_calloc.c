@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 14:33:31 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/07 19:08:08 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,12 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int	i;
 	int	*x;
 
-	i = 0;
-	size = sizeof(int);
 	x = (int *)malloc(count * sizeof(int));
 	if (x == NULL)
 		return (NULL);
-	bzero (x, size);
+	ft_bzero (x, size);
 	return (x);
 }
 // int main()
@@ -35,11 +32,10 @@ void	*ft_calloc(size_t count, size_t size)
 
 // 	n = 5;
 // 	i = 0;
-// 	b = 1;
-// 	x = ft_calloc(n, sizeof(int));
+// 	x = calloc(n, sizeof(int));
 // 	while (i < n)
 // 	{
-// 		printf("%d ",x[i]);
+// 		printf("%d\n",x[i]);
 // 		i++;
 // 	}
 // 	return (0);

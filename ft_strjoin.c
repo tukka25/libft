@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:54:47 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/04 14:51:42 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/07 18:19:28 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // {
 // 	char s1[] = "";
 // 	char s2[] = "";
-	
 // 	printf("%s", ft_strjoin(s1, s2));
 // 	return (0);
 // }

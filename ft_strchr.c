@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:36:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/06 19:47:00 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/07 19:10:14 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ char	*ft_strchr(const char *s, int c)
 		return (tmp + ft_strlen(tmp));
 	return (NULL);
 }
-int main()
-{
-	char s[] = "tukka";
-	int c = 'u';
-	//printf("%s",strchr(s, c));
-	printf("%s",ft_strchr(s, c));
-}
+// int main()
+// {
+// 	char s[] = "tukka";
+// 	int c = 'u';
+// 	//printf("%s",strchr(s, c));
+// 	printf("%s",ft_strchr(s, c));
+// }

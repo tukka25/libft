@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:54:26 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:32:19 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/07 19:04:55 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,4 @@ void	*ft_memset(void *str, int ch, size_t n)
 //     // ch = '0';
 //     // n = 3;
 //     // printf("%s",ft_memset(str,ch,n));
-
-
 // }
