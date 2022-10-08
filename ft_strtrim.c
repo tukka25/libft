@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:53:09 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/08 18:23:36 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 22:35:04 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,31 +74,31 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		count;
 	char	*new_string;
 
+	if (!s1 || !set)
+		return (NULL);
 	count = check_string_from_end(s1, set)
 		+ check_string_from_begining(s1, set);
 	len = ft_strlen(s1) - count;
-	if (count == ft_strlen(s1))
+	if (len == 0)
 	{
-		new_string = (char*)malloc(sizeof(char) + 1);
+		new_string = (char *)malloc(1);
 		new_string[0] = 0;
 		return (new_string);
 	}
-	new_string = (char *)malloc(len * sizeof(char) + 1);
-	if (!new_string)
-		return (NULL);
 	i = 0;
 	j = 0;
 	count = check_string_from_begining(s1, set);
 	new_string = ft_substr(s1, count, len);
+	if (!new_string)
+		return (NULL);
 	new_string[len] = '\0';
 	return (new_string);
 }
 
-int main()
-{
-	char *s1 = "   xxx   xxx";
-	char *s2 = " x";
-	char *ret = ft_strtrim(s1, " x");
-		printf("%s", ret);
-
-}
+// int main()
+// {
+// 	char *s1 = "        ";
+// 	char *s2 = " ";
+// 	char *ret = ft_strtrim(s1, " ");
+// 		printf("%s", ret);
+// }

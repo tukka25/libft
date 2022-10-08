@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:54:47 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/07 18:19:28 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 19:54:37 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
 	len = ft_strlen(s1) + ft_strlen(s2);

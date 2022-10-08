@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:03 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 13:34:50 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 22:14:54 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	const char s[] = {0, 1, 2 ,3 ,4 ,5};
 // 	const char ch = 2;
 // 	char *ret = memchr(s, ch, 4);
-
 
 //    //printf("String after %s \n", ret);
 //    //printf("%s\n", ft_memchr(s, 2, 3));

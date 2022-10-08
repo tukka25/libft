@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:27 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 13:35:46 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 22:15:02 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 //  printf("%d\n",ft_memcmp(s2, s3, 4));
 //  printf("%d",memcmp(s2, s3, 4));
- 
-
 // }
