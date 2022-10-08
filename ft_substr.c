@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:39:55 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/03 21:06:35 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:21:12 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,37 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
+	size_t		i;
 	char	*new_string;
 	int		j;
-	char	k;
 
-	i = 0;
+	i = ft_strlen(s);
 	j = 0;
-	k = start - '0';
-	new_string = (char *)malloc(len * sizeof(char));
+	if (len > i)
+		len = i;
+	if (start > i)
+	{
+		new_string = (char*)malloc(sizeof(char) + 1);
+		new_string[0] = 0;
+		return (new_string);
+	}
+	new_string = (char *)malloc(len * sizeof(char) + 1);
 	if (!new_string)
 		return (NULL);
-	while (s[i] != start && s[i] != '\0')
-		i++;
-	if (s[i] != start)
-		return (NULL);
-	while (s[i] != '\0' && len > 0)
+	while (s[start] != '\0' && len-- > 0)
 	{
-		new_string[j] = s[i];
-		i++;
+		new_string[j] = s[start];
+		 start++;
 		j++;
-		len--;
 	}
-	//new_string[j] = '\0';
+	new_string[j] = '\0';
 	return (new_string);
 }
-int main ()
-{
-	char	s[] = "abcdefghijk";
-	int ch = 'a';
-	int len = 6;
-	printf("%s", ft_substr(s, ch, len));
-	return (0);
-}
+// int main ()
+// {
+// 	char	s[] = "tripouille";
+// 	int ch = 0;
+// 	int len = 4200;
+// 	printf("%s", ft_substr(s, ch, len));
+// 	return (0);
+// }

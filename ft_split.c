@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:50:36 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/07 23:42:49 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:49:01 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,16 +95,16 @@ char	**ft_split(char const *s, char c)
 	free(str);
 }
 
-int main ()
-{
-	char	**tab;
-	int		i;
+// int main ()
+// {
+// 	char	**tab;
+// 	int		i;
 
-	i = 0; 
-	tab = ft_split("  my     name   is     mohamed        ", ' ');
-	while(tab[i] != NULL)
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-}
+// 	i = 0; 
+// 	tab = ft_split("  my     name   is     mohamed        ", ' ');
+// 	while(tab[i] != NULL)
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		i++;
+// 	}
+// }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:36:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/07 19:10:14 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/08 15:43:04 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,4 @@ char	*ft_strchr(const char *s, int c)
 // 	int c = 'u';
 // 	//printf("%s",strchr(s, c));
 // 	printf("%s",ft_strchr(s, c));
-// }
+// }   "        " "  "
