@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/06 14:53:48 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/09 20:07:37 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct s_list
 {
@@ -80,4 +81,11 @@ char	**ft_split(char const *s, char c);
 
 char	*ft_strtrim(char const *s1, char const *set);
 
+char	*ft_itoa(int n);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
 #endif
