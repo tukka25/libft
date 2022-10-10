@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:03 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/08 22:14:54 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/09 22:27:26 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	f = (char *)s;
 	i = 0;
-	while (f[i] != '\0' && i < n)
+	while (i < n)
 	{
 		if (f[i] == (char)c)
 		{

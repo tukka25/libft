@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:17 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/07 19:08:22 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:28:45 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*ns;
 	char	*nd;
 
-	if (dst == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	i = 0;
 	ns = (char *)src;
@@ -34,8 +34,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // int main()
 // {
 //      //int n = 3;
-//     char dst[] = "aboody";
-//     char src[] = "tukka";
+//     char dst[] = "";
+//     char src[] = "";
 
-//         printf("%s", ft_memcpy(dst, src, sizeof (src)));
+//         // printf("%s\n", memcpy(dst, src, sizeof (src)));
+// 		// printf("%s", ft_memcpy(dst, src, sizeof (src)));
 // }

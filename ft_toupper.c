@@ -6,13 +6,13 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:55:20 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:36:05 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/09 22:11:03 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int n)
+int	ft_toupper(int n)
 {
 	if (n >= 97 && n <= 122)
 	{

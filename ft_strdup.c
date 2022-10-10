@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:09:54 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/09 19:44:24 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:25:15 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s1)
 		i++;
 	}
 	str = (char *)malloc((i * sizeof(char)) + 1);
-	if(!str)
+	if (!str)
 		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
@@ -42,5 +42,4 @@ char	*ft_strdup(const char *s1)
 
 // 	printf("%s",ft_strdup(s));
 // 	//printf("%s",strdup(s));
-	
 //  }

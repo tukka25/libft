@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:53:09 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/08 22:35:04 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/10 20:51:00 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	check_string_from_end(char const *s1, char const *set)
 	int	j;
 	int	count1;
 
-	i = strlen(s1) - 1;
+	i = ft_strlen(s1) - 1;
 	j = 0;
 	count1 = 0;
 	while (i > 0)
@@ -71,13 +71,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		j;
 	int		len;
-	int		count;
+	size_t		count;
 	char	*new_string;
 
 	if (!s1 || !set)
 		return (NULL);
 	count = check_string_from_end(s1, set)
 		+ check_string_from_begining(s1, set);
+		// if (ft_strlen(s1) < 0)
+		// 	return (NULL);
 	len = ft_strlen(s1) - count;
 	if (len == 0)
 	{
@@ -94,11 +96,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_string[len] = '\0';
 	return (new_string);
 }
-
+// #include <stdio.h>
 // int main()
 // {
-// 	char *s1 = "        ";
+// 	char *s1 = "          ";
 // 	char *s2 = " ";
-// 	char *ret = ft_strtrim(s1, " ");
+// 	char *ret = ft_strtrim(s1, s2);
 // 		printf("%s", ret);
 // }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/06 19:45:07 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:26:29 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ char	*ft_strrchr(const char *s, int c)
 	n = 0;
 	if (c > 127)
 		return (ns);
-	if (s == NULL || c == 0)
-		return ("");
-	while (ns[i] != '\0'){
+	while (ns[i])
+	{
 		if (ns[i] == c)
 			n++;
 		i++;

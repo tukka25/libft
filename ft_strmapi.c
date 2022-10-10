@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 17:10:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 19:58:02 by abdamoha         ###   ########.fr       */
+/*   Created: 2022/10/10 17:59:21 by abdamoha          #+#    #+#             */
+/*   Updated: 2022/10/10 18:08:26 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*x;
+	unsigned int	i;
+	char			*str;
 
-	if (count >= SIZE_MAX || size >= SIZE_MAX)
+	i = 0;
+	if (s == NULL)
 		return (NULL);
-	x = malloc(count * size);
-	if (!x)
+	str = malloc(sizeof(*s) * (ft_strlen(s)) + 1);
+	if (!str)
 		return (NULL);
-	ft_bzero (x, (size * count));
-	return (x);
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
+
+// char	f(unsigned int i, char c)
+// {
+// 	char	str;
+
+// 	str = ft_toupper(c);
+// 	return (str);
+// }
+
+// #include <stdio.h>
 // int main()
 // {
-// 	int	*x;
-// 	int n,i, b;
-
-// 	n = 0;
-// 	i = 0;
-// 	int size = 0;
-// 	x = ft_calloc(n, size);
-// 	while (i < n)
-// 	{
-// 		printf("%d\n",x[i]);
-// 		i++;
-// 	}
-// 	return (0);
+// 	char *str = ft_strmapi("tukka", f);
+// 	printf ("%s\n", str);
 // }

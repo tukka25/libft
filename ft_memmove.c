@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:46 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 23:11:48 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:56:05 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,29 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	int		j;
-	char	*new_dst;
-	char	*new_src;
+	size_t		i;
+	int			j;
+	char		*new_dst;
+	char		*new_src;
 
 	i = 0;
 	j = 0;
 	new_dst = (char *)dst;
 	new_src = (char *)src;
-	while (len != 0)
+	if (!src && !dst)
+		return (NULL);
+	if (new_dst > new_src)
 	{
-		new_dst[i] = new_src[j];
-		i++;
-		j++;
-		len--;
+		while (len-- > 0)
+			new_dst[len] = new_src[len];
+	}
+	else
+	{
+		while (i < len)
+		{
+			new_dst[i] = new_src[i];
+			i++;
+		}
 	}
 	return (new_dst);
 }
@@ -43,6 +51,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // 	char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
 
 // 	printf("%s\n", ft_memmove(sResult + 1, sResult, 2));
-// 	//printf("%s", memmove(sResult + 1, sResult, 2));
-// 	return (0); 
-// }
+// 	printf("%s\n",    memmove(sResult + 1, sResult, 2));
+// 	return (0);
+//}

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/09 20:11:40 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:07:37 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -33,9 +32,9 @@ void	*ft_memchr(const void *s, int c, size_t n);
 
 void	*ft_bzero(void *str, size_t n);
 
-char	ft_toupper(int n);
+int		ft_toupper(int n);
 
-char	ft_tolower(int n);
+int		ft_tolower(int n);
 
 size_t	ft_strlen(const char *str);
 
@@ -90,4 +89,8 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+void	ft_striteri(char *s, void (*f)(unsigned int,char*));
 #endif
