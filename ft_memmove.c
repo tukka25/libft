@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:46 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 15:56:05 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/12 16:15:53 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t		i;
-	int			j;
+	size_t		j;
 	char		*new_dst;
 	char		*new_src;
 

@@ -2,7 +2,7 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
 
-OBJS = ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
 RM		= rm -f
 
@@ -16,19 +16,27 @@ SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 		ft_split.c ft_substr.c ft_itoa.c ft_putchar_fd.c ft_putstr_fd.c\
 		ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c ft_striteri.c\
 
+SRCSB = ft_lstnew.c 
 
-$(NAME): ${OBJS}
-		ar rcs ${NAME} ${OBJS}
+OBJSB = $(SRCSB:.c=.o)
+
+$(NAME): $(OBJS)
+		ar rcs $(NAME) $(OBJS)
 
 %.o : %.c 
-	gcc ${FLAGS} -c $^	
+	gcc ${FLAGS} -c $^
 
-all:	${NAME}
+#all:	${NAME}
 
+#bonus:
+#	ar rcs ${NAME} ${OBJSB}
 clean:
-		@${RM} ${OBJS}
+		@$(RM) $(OBJS) $(OBJSB)
 
 fclean:	clean
-		${RM} ${NAME}
+		$(RM) $(NAME)
 
 re:		fclean all
+
+bonus: $(NAME) $(OBJSB)
+	ar rcs $(NAME) $(OBJSB)

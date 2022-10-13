@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 18:07:37 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/13 19:38:26 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,8 @@ void	ft_putnbr_fd(int n, int fd);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
-void	ft_striteri(char *s, void (*f)(unsigned int,char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+t_list	*ft_lstnew(void *content);
+
 #endif

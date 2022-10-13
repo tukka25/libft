@@ -6,24 +6,23 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:50:36 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 22:09:29 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/13 16:57:31 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	string_len(const char *s, int j, char c)
 {
-	int	i;
-
-	i = 0;
-	while (s[j] != '\0')
+	j = 0;
+	while (s[j])
 	{
-		if (s[j] == c)
-			return (j);
+		if (s[j] != c && (s[j+1] == c || !s[j]))
+			return (j + 1);
 		j++;
 	}
-	return (0);
+	return (j);
 }
 
 static char	*mem_allocation_of_strings(const char *s, char c)
@@ -57,7 +56,8 @@ static int	count_string(const char *s, char c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if ((s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
+		// if ((s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
+		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && !s[i + 1]))
 			len++;
 		i++;
 	}
@@ -97,7 +97,7 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char	**tab;
 // 	int		i;
-// 	tab = ft_split("          ", ' ');
+// 	tab = ft_split("acd1,1cdz1 1cd ", '1');
 // 	i = 0; 
 // 	while (tab[i] != NULL)
 // 	{
@@ -106,5 +106,5 @@ char	**ft_split(char const *s, char c)
 // 	}
 // 	//  if (tab[i] == NULL)
 // 	//  printf("%d", i);
-// 	//printf("%d", i);
+// 	// printf("%d", i);
 // }
