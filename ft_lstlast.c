@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 17:14:39 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/14 21:47:00 by abdamoha         ###   ########.fr       */
+/*   Created: 2022/10/15 16:10:31 by abdamoha          #+#    #+#             */
+/*   Updated: 2022/10/15 16:58:26 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new;
-	
-	new = NULL;
-	new = malloc(sizeof(t_list));
-	if(!new)
+	t_list	*tmp;
+
+	if (lst == NULL)
 		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	tmp = lst;
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+	}
+	return (tmp);
 }
-// #include <stdio.h>
 // int main()
 // {
-// 	printf("%s", ft_lstnew("tukka")->content);
-// 	return (0);
+// 	t_list *lst;
+// 	t_list *first;
+// 	t_list *second;
+
+// 	lst = ft_lstnew("one");
+// 	first = ft_lstnew("two");
+// 	second = ft_lstnew("three");
+
+// 	lst->next = first;
+// 	first->next = second;
+// 	second->next = NULL;
+
+// 	printf("%s", ft_lstlast(lst)->content);
 // }

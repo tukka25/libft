@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:50:36 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/13 16:57:31 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/13 23:28:10 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	string_len(const char *s, int j, char c)
 	j = 0;
 	while (s[j])
 	{
-		if (s[j] != c && (s[j+1] == c || !s[j]))
+		if (s[j] != c && (s[j + 1] == c || !s[j]))
 			return (j + 1);
 		j++;
 	}
@@ -56,7 +56,6 @@ static int	count_string(const char *s, char c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		// if ((s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
 		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && !s[i + 1]))
 			len++;
 		i++;
@@ -73,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	len = count_string(s, c);
-	str = malloc(len * sizeof(char *) + 1);
+	str = malloc((len + 1) * sizeof(char *));
 	j = 0;
 	if (!str)
 		return (NULL);
@@ -92,19 +91,3 @@ char	**ft_split(char const *s, char c)
 	str[j] = NULL;
 	return (str);
 }
-// #include <stdio.h>
-// int main ()
-// {
-// 	char	**tab;
-// 	int		i;
-// 	tab = ft_split("acd1,1cdz1 1cd ", '1');
-// 	i = 0; 
-// 	while (tab[i] != NULL)
-// 	{
-// 		printf("%s\n", tab[i]);
-// 		i++;
-// 	}
-// 	//  if (tab[i] == NULL)
-// 	//  printf("%d", i);
-// 	// printf("%d", i);
-// }

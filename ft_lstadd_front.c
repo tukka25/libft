@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 17:14:39 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/14 21:47:00 by abdamoha         ###   ########.fr       */
+/*   Created: 2022/10/13 20:02:20 by abdamoha          #+#    #+#             */
+/*   Updated: 2022/10/14 21:33:29 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*new;
-	
-	new = NULL;
-	new = malloc(sizeof(t_list));
-	if(!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	new->next = *lst;
+	*lst = new;
 }
-// #include <stdio.h>
+
 // int main()
 // {
-// 	printf("%s", ft_lstnew("tukka")->content);
-// 	return (0);
+// 	t_list	*head;
+// 	t_list	*lst;
+// 	t_list *new;
+
+// 	lst = ft_lstnew("ahmed ");
+// 	new = ft_lstnew(" tukka");
+// 	ft_lstadd_front(&lst, new);
+// 	while (lst->next != NULL)
+// 	{
+// 		printf("%s", lst->content);
+// 		lst = lst->next;
+// 	}
+// 	printf("%s", lst->content);
 // }

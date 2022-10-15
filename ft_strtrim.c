@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:53:09 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 20:51:00 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:29:10 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1) - count;
 	if (len == 0)
 	{
-		new_string = (char *)malloc(1);
-		new_string[0] = 0;
+		new_string = malloc(1);
+		new_string[0] = '\0';
 		return (new_string);
 	}
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:39:55 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 20:53:49 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/13 23:30:05 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		new_string[0] = 0;
 		return (new_string);
 	}
-	new_string = malloc(len * sizeof(char) + 1);
+	new_string = malloc((len + 1) * sizeof(char));
 	if (!new_string)
 		return (NULL);
 	while (s[start] != '\0' && len-- > 0)
