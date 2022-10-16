@@ -6,12 +6,21 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:12:33 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/30 17:45:22 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/16 20:10:24 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// long long checker(long long result)
+// {
+// 	if (result >=  9223372036854775807ULL)
+// 		return(-1);
+// 	else if(result <=  9223372036854775809)
+// 		return (0);
+// 	else 
+// 		return (result);
+// }
 int	ft_atoi(const char *str)
 {
 	long long	sign;
@@ -30,16 +39,24 @@ int	ft_atoi(const char *str)
 		++i;
 	while (str[i] >= 48 && str[i] <= 57)
 		result = result * 10 + str[i++] - '0';
-	return (result * sign);
+	
+	if (result >=  INT_MAX)
+		return(-1);
+	else if(result <=  INT_MIN)
+		return (0);
+	else 
+		return (result * sign);
+	//checker(result);
+	//return (result * sign);
 }
 // #include <stdio.h>
 // #include <stdlib.h>
 // int main()
 // {
 // 	char *s;
-// 	s = "-2147483648";
+// 	s = "92233720368547758789567";
 // 	//int n = atoi(s);
 // 	//printf("%d",n);
 // 	printf("%d\n", ft_atoi(s));
-// 		printf("%d", atoi(s));
+// 		 printf("%d", atoi(s));
 // }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:39:48 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/15 20:19:06 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/16 22:42:07 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include<stdio.h>
+#include <limits.h>
 
 typedef struct s_list
 {
@@ -107,4 +108,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 #endif
