@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:03 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 20:40:23 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/17 02:21:47 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-// int main()
-// {
-// 	char haystack[] = "2rtyabcdhjkl";
-// 	char needle[] = "abcd";
-// 	printf("%s\n",strnstr(haystack, needle, 10));
-// 	printf("%s",ft_strnstr(haystack, needle, 10));
-// 	return (0);
-// }
+int main()
+{
+	char haystack[] = "2rtyabcdhjkl";
+	char needle[] = "abcd";
+	
+	printf("%s\n",strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
+	//printf("%s",ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
+	return (0);
+}

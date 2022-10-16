@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 16:26:29 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/17 02:18:20 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	ns = (char *) s;
 	n = 0;
+	if (c == '\0' || s == NULL)
+		return (NULL);
 	if (c > 127)
 		return (ns);
 	while (ns[i])
@@ -43,12 +45,12 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-// int main()
-// {
-// 	char s[] = "tripouille";
-// 	char s2[] = "ltripouiel";
-// 	//char s3[] = "";
-// 	// int c = ;
-// 	printf("%s",strrchr(s, 0));
-// 	printf("%s",ft_strrchr(s, 0));
-// }
+int main()
+{
+	char s[] = "tttripouille";
+	char s2[] = "tttripouiel";
+	//char s3[] = "";
+	// int c = ;
+	printf("%s\n",strrchr(s, 't'));
+	printf("%s",ft_strrchr(s, 't'));
+}
