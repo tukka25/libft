@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:15 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 16:25:24 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:30:09 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t		i;
 	size_t		j;
 
-	j = 0;
 	i = 0;
-	if (dstsize <= ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
+	if (!dst && !dstsize)
+		return (ft_strlen(src));
 	j = ft_strlen(dst);
-	while (src[i] != '\0' && j + 1 < dstsize)
+	if (j >= dstsize)
+		return (ft_strlen(src) + dstsize);
+	if (dst == NULL && dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] && j + 1 < dstsize)
 	{
 		dst[j] = src[i];
 		i++;
@@ -32,12 +35,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = ft_strlen(dst) + ft_strlen(&src[i]);
 	return (i);
 }
+// #include <string.h>
 // int main()
 // {
-//     char src[30] = "AAAAAA";
-// 	char *dst = "b";
 
-//     printf("%zu\n",strlcat(dst, src, 0));
-//     printf("%zu\n",ft_strlcat(dst, src, 0));
-// 	//printf("%s",strcat(dst, src));
+// 	// char dest[30]; memset(dest, 0, 30);
+// 	// char * src = (char *)"AAAAAAAAA";
+// 	// size_t size = 8;
+// 	char b[0xF] = "nyan !";
+
+// 	printf("%zu\n", strlcat(((void *)0), b, 0));
+// 	printf("%zu\n",ft_strlcat(((void *)0), b, 0));
+// 	// printf("%d",strcmp("", dest));
 // }

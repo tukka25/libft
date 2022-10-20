@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:36:47 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/15 19:51:53 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:06:48 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,41 +18,42 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst)
 		return ;
-	tmp = *lst;
 	if (!*lst)
 	{
 		*lst = new;
 		return ;
 	}
+	tmp = *lst;
 	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
 	}
 	tmp->next = new;
-	new->next = NULL;
 }
 // int main ()
 // {
-// 	 t_list *f;
-// 	t_list *g;
+// 	t_list *l;
+// 	t_list *l2;
 // 	t_list *c;
 // 	t_list *k;
 // 	t_list	*tmp;
 
-// 	f = ft_lstnew("a");
-// 	g = ft_lstnew("b");
-// 	c = ft_lstnew("c");
-// 	// k = ft_lstnew("ds4t");
+// 	l = NULL;
+// 	l2 = NULL;
+// 	// f = ft_lstnew("a");
+// 	// g = ft_lstnew("b");
+// 	// c = ft_lstnew("c");
+// 	//  k = ft_lstnew("ds4t");
 
-// 	f->next = g;
-// 	g->next = c;
-// 	c->next = NULL;
-// 	 ft_lstadd_back(NULL, NULL);
-// 	 k = ft_lstnew("ds4t");
-// 	while (f->next)
-// 	{
-// 		//printf("%s", f->content);
-// 		f = f->next;
-// 	}
-// 	printf("%s", k->content);
+// 	// f->next = g;
+// 	// g->next = c;
+// 	// c->next = NULL;
+// 	 ft_lstadd_back(&l, l2);
+// 	//  k = ft_lstnew("ds4t");
+// 	// while (l->next)
+// 	// {
+// 	// 	printf("%s\n", l->content);
+// 	// 	l = l->next;
+// 	// }
+// 	printf("%s", l->next->next->next->content);
 // }

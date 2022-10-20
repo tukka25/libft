@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:10:03 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/17 02:21:47 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 14:47:47 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,27 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
-	char	*new_needle;
-	char	*new_haystack;
+	size_t		i;
+	size_t		j;
+	char		*new_haystack;
 
-	new_needle = (char *) needle;
 	new_haystack = (char *) haystack;
 	i = 0;
 	if (*needle == '\0')
-		return (new_haystack);
-	while (*haystack != '\0' && len > 0){
-		while (*haystack == *needle && len > 0)
+		return ((char *)haystack);
+	if ((!haystack && len == 0))
+		return (NULL);
+	while (haystack[i] != '\0' && i < len)
+	{
+		j = 0;
+		while (haystack[i + j] == needle[j] && i + j < len)
 		{
-			haystack++;
-			needle++;
-			if (*needle == '\0'){
+			if (needle[j + 1] == '\0')
 				return (new_haystack);
-			}
-			len--;
+			j++;
 		}
-		haystack++;
-		len--;
 		new_haystack++;
+		i++;
 	}
 	return (NULL);
-}
-int main()
-{
-	char haystack[] = "2rtyabcdhjkl";
-	char needle[] = "abcd";
-	
-	printf("%s\n",strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
-	//printf("%s",ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
-	return (0);
 }

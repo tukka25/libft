@@ -6,11 +6,38 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:54:47 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/08 19:54:37 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/19 15:03:16 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	len_check(char const *s1, char const *s2)
+{
+	int	len_1;
+	int	len_2;
+	int	len;
+
+	len_1 = 0;
+	len_2 = 0;
+	if (s1 == NULL)
+	{
+		len_1 = 0;
+		len_2 = ft_strlen(s2);
+	}
+	else if (s2 == NULL)
+	{
+		len_2 = 0;
+		len_1 = ft_strlen(s1);
+	}
+	else
+	{
+		len_1 = ft_strlen(s1);
+		len_2 = ft_strlen(s2);
+	}
+	len = len_1 + len_2;
+	return (len);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -19,11 +46,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	if (s1 == NULL && s2)
+		return ((char *)s2);
+	if (s2 == NULL && s1)
+		return ((char *)s1);
 	i = 0;
 	j = 0;
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = len_check(s1, s2);
 	str = (char *)malloc(len * sizeof(char) + 1);
 	if (!str)
 		return (0);
@@ -35,10 +66,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = '\0';
 	return (str);
 }
+
+// #include <string.h>
+
 // int main()
 // {
-// 	char s1[] = "";
-// 	char s2[] = "";
-// 	printf("%s", ft_strjoin(s1, s2));
+// 	char *s1 = "my favorite animal is";
+// 	char *s2 = " ";
+// 	char *s3 = "the nyancat";
+// 	char *tmp;
+// 	tmp = ft_strjoin("my favorite animal is", " ");
+// 	printf("%s",ft_strjoin(tmp, s3));
 // 	return (0);
 // }

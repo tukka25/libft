@@ -6,57 +6,42 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:12:33 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/16 20:10:24 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:09:33 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// long long checker(long long result)
-// {
-// 	if (result >=  9223372036854775807ULL)
-// 		return(-1);
-// 	else if(result <=  9223372036854775809)
-// 		return (0);
-// 	else 
-// 		return (result);
-// }
 int	ft_atoi(const char *str)
 {
-	long long	sign;
-	long long	result;
-	int			i;
+	int					sign;
+	unsigned long long	result;
+	int					i;
+	int					d;
 
 	result = 0;
 	i = 0;
+	d = 0;
 	sign = 1;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == ' '))
 		i++;
 	if (str[i] == '-')
 		sign = -1;
 	if (str[i] == '+' || str[i] == '-')
 		++i;
-	while (str[i] >= 48 && str[i] <= 57)
+	while (str[i] == '0')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
 		result = result * 10 + str[i++] - '0';
-	
-	if (result >=  INT_MAX)
-		return(-1);
-	else if(result <=  INT_MIN)
-		return (0);
-	else 
-		return (result * sign);
-	//checker(result);
-	//return (result * sign);
+		d++;
+	}
+	if ((result >= 9223372036854775808ULL && sign == 1) || d > 19)
+		return (-(sign == 1));
+	return (result * sign);
 }
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main()
+// int main(int ac, char **av)
 // {
-// 	char *s;
-// 	s = "92233720368547758789567";
-// 	//int n = atoi(s);
-// 	//printf("%d",n);
-// 	printf("%d\n", ft_atoi(s));
-// 		 printf("%d", atoi(s));
+// 	printf("Our Atoi says:	%d\n", ft_atoi(av[1]));
+// 	printf("PC  Atoi says:	%d\n",	 atoi(av[1]));
 // }

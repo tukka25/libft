@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:55:05 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 16:25:01 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:23:34 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+// #include <string.h>
 // int main()
 // {
-//     char *str = "tukka";
-// printf("%d",ft_strlen(str));
-
+//     char *str = NULL;
+// 	//printf("%zu",ft_strlen(str));
+// 	//printf("%zu", strlen (str));
 // }

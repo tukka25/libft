@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:53:09 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/15 18:29:10 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:06:08 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	checker(char const *set, char c)
 	return (0);
 }
 
-static int	check_string_from_begining(char const *s1, char const *set)
+static int	check_begining(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -46,7 +46,7 @@ static int	check_string_from_begining(char const *s1, char const *set)
 	return (count2);
 }
 
-static int	check_string_from_end(char const *s1, char const *set)
+static int	check_end(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -68,18 +68,15 @@ static int	check_string_from_end(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
 	int		len;
-	size_t		count;
+	size_t	count;
 	char	*new_string;
 
 	if (!s1 || !set)
 		return (NULL);
-	count = check_string_from_end(s1, set)
-		+ check_string_from_begining(s1, set);
-		// if (ft_strlen(s1) < 0)
-		// 	return (NULL);
+	count = check_end(s1, set) + check_begining(s1, set);
+	if (count >= ft_strlen(s1))
+		return (ft_strdup(""));
 	len = ft_strlen(s1) - count;
 	if (len == 0)
 	{
@@ -87,9 +84,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		new_string[0] = '\0';
 		return (new_string);
 	}
-	i = 0;
-	j = 0;
-	count = check_string_from_begining(s1, set);
+	count = check_begining(s1, set);
 	new_string = ft_substr(s1, count, len);
 	if (!new_string)
 		return (NULL);
@@ -97,10 +92,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (new_string);
 }
 // #include <stdio.h>
-// int main()
+// int main(int argc, char **argv)
 // {
-// 	char *s1 = "          ";
-// 	char *s2 = " ";
+// 	char *s1 = "  $ ? this is a fo a $  ? " ;
+// 	char *s2 =  "$? t";
 // 	char *ret = ft_strtrim(s1, s2);
-// 		printf("%s", ret);
+// 	printf("%s", ret);
 // }

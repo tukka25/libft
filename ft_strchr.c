@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:36:18 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/08 15:43:04 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:14:16 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,28 @@ char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	*new_string;
-	char	*tmp;
+	char	tmp;
 
 	i = 0;
-	tmp = (char *) s;
+	tmp = (char ) c;
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == tmp)
 		{
 			new_string = (char *) s;
 			return (new_string);
 		}
 		s++;
 	}
-	if (c > 127)
-		return (tmp);
-	if (c == 0)
-		return (tmp + ft_strlen(tmp));
+	if (tmp == 0)
+		return ((char *)s + ft_strlen(s));
 	return (NULL);
 }
+// #include <string.h>
 // int main()
 // {
-// 	char s[] = "tukka";
-// 	int c = 'u';
-// 	//printf("%s",strchr(s, c));
-// 	printf("%s",ft_strchr(s, c));
-// }   "        " "  "
+// 	char s[] = "abcdt";
+// 	int c = 't' + 256;
+// 	printf("%s\n",strchr(s, c));
+// 	printf("%s\n",ft_strchr(s, c));
+// }

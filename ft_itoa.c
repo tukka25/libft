@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:19:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/09 19:07:40 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:06:22 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,27 @@ int	number_of_digits(int n)
 	return (i);
 }
 
+char	*printing(long nb, int len, char *str)
+{
+	char	result;
+
+	while (nb > 0)
+	{
+		result = (nb % 10) + '0';
+		str[len - 1] = result;
+		nb = nb / 10;
+		len--;
+	}
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
-	int		i;
 	int		len;
 	char	*str;
-	char	result;
-	long nb = n;
+	long	nb;
 
-	i = 0;
+	nb = n;
 	len = number_of_digits(nb);
 	str = malloc(len * (sizeof(char)) + 1);
 	if (!str)
@@ -55,12 +67,12 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		nb = nb * -1;
 	}
-	while (nb > 0)
-	{
-		result = (nb % 10) + '0';
-		str[len - 1] = result;
-		nb = nb / 10;
-		len--;
-	}
+	str = printing(nb, len, str);
 	return (str);
 }
+
+// int main(int ac, char **av)
+// {
+// 	printf("Our itoa says:	%s\n", ft_itoa(01001));
+// 	// printf("PC  Atoi says:	%d\n",	 atoi(av[1]));
+// }
