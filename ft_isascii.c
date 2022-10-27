@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:52:52 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/07 19:09:49 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:06:47 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ int	ft_isascii(int c)
 {
 	return ((c >= 0 && c <= 127));
 }
-// int main()
-// {
-//     char v;
-
-//     v = '';
-//     printf("%d", ft_iascii(v));
-// }

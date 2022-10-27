@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:02 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/09/29 22:25:18 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/24 20:24:19 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 int	ft_isdigit(int f)
 {
-	return ((f >= 48 && f <= 57));
+	return ((f >= '0' && f <= '9'));
 }
-
-// int main()
-// {
-//     char f;
-
-//     f = '4';
-
-//     printf("%d", ft_isdigit(f));
-// }

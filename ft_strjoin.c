@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:54:47 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/19 15:03:16 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:04:23 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[j] = '\0';
 	return (str);
 }
-
-// #include <string.h>
-
-// int main()
-// {
-// 	char *s1 = "my favorite animal is";
-// 	char *s2 = " ";
-// 	char *s3 = "the nyancat";
-// 	char *tmp;
-// 	tmp = ft_strjoin("my favorite animal is", " ");
-// 	printf("%s",ft_strjoin(tmp, s3));
-// 	return (0);
-// }

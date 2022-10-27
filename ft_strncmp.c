@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 20:02:59 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/18 16:57:49 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:08:05 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (ns1[i] - ns2[i]);
 	return (0);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char s1[] = "";
-// 	char s2[] = "1";
-
-// 	printf("%d\n", strncmp(s1, s2, 0));
-// 	printf("%d", ft_strncmp(s1, s2, 0));
-// }

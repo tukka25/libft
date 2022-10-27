@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 20:00:24 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 18:33:46 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 19:36:42 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,3 @@ void	ft_putstr_fd(char *s, int fd)
 		}
 	}
 }
-// int main()
-// {
-// 	char s[] = "tukka";
-// 	ft_putstr_fd(s, 1);
-// }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:54:57 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/10 15:48:05 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:04:09 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (ft_strlen(src));
 }
-// int main()
-// {
-// 	char src[] = "coucou";
-// 	char dest[] = "fy8ory";
-
-// 	printf("%lu\n", strlcpy(dest, src, 2));
-// 	printf("%lu", ft_strlcpy(dest, src, 2));
-// }

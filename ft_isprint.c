@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:53:10 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/02 09:20:22 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:06:37 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_isprint(int c)
 	}
 	return (0);
 }
-// int main(){
-//     char c;
-//     c = '~';
-//     printf("%d\n",ft_isprint(c));
-// 	printf("%d", isprint(c));
-// }

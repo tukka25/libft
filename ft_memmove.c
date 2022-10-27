@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:04:46 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/12 16:15:53 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:04:53 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (new_dst);
 }
-// int main()
-// {
-// 	char s[] = {65, 66, 67, 68, 69, 0, 45};
-// 	char s0[] = { 0,  0,  0,  0,  0,  0, 0};
-// 	char sCpy[] = {65, 66, 67, 68, 69, 0, 45};
-// 	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
-// 	char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
-
-// 	printf("%s\n", ft_memmove(sResult + 1, sResult, 2));
-// 	printf("%s\n",    memmove(sResult + 1, sResult, 2));
-// 	return (0);
-//}

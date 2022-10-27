@@ -6,12 +6,11 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:50:36 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/13 23:28:10 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:11:38 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	string_len(const char *s, int j, char c)
 {

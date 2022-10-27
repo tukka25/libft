@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:59:21 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/17 20:32:41 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:03:46 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// char	f(unsigned int i, char c)
-// {
-// 	char	str;
-
-// 	str = ft_toupper(c);
-// 	return (str);
-// }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char *str = ft_strmapi("tukka", f);
-// 	printf ("%s\n", str);
-// }

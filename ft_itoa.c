@@ -6,13 +6,13 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:19:11 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/17 23:06:22 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/24 20:24:40 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	number_of_digits(int n)
+static int	number_of_digits(int n)
 {
 	int	i;
 
@@ -31,7 +31,7 @@ int	number_of_digits(int n)
 	return (i);
 }
 
-char	*printing(long nb, int len, char *str)
+static char	*printing(long nb, int len, char *str)
 {
 	char	result;
 
@@ -70,9 +70,3 @@ char	*ft_itoa(int n)
 	str = printing(nb, len, str);
 	return (str);
 }
-
-// int main(int ac, char **av)
-// {
-// 	printf("Our itoa says:	%s\n", ft_itoa(01001));
-// 	// printf("PC  Atoi says:	%d\n",	 atoi(av[1]));
-// }

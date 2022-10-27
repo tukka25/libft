@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 19:45:32 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/09 19:58:46 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 19:35:43 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
-// int main()
-// {
-// 	char c = 'c';
-// 	ft_putchar_fd(c, 0);
-// }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:55:12 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/09 22:10:51 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/26 22:48:36 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,7 @@ int	ft_tolower(int n)
 {
 	if (n >= 'A' && n <= 'Z')
 	{
-		n = n + 32;
-		return (n);
+		return (n + 32);
 	}
 	return (n);
 }
-// int main()
-// {
-//     char n;
-
-//     n = 'c';
-//     printf("%c", ft_tolower(n));
-// }

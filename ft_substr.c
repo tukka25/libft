@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:39:55 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/13 23:30:05 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:03:27 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new_string[j] = '\0';
 	return (new_string);
 }
-// int main ()
-// {
-// 	char	s[] = "tripouille";
-// 	int ch = 0;
-// 	int len = 4200;
-// 	printf("%s", ft_substr(s, ch, len));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:12:33 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/20 16:09:33 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 19:07:14 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,3 @@ int	ft_atoi(const char *str)
 		return (-(sign == 1));
 	return (result * sign);
 }
-// int main(int ac, char **av)
-// {
-// 	printf("Our Atoi says:	%d\n", ft_atoi(av[1]));
-// 	printf("PC  Atoi says:	%d\n",	 atoi(av[1]));
-// }

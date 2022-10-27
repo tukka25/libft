@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:55:20 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/09 22:11:03 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:12:54 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,9 @@
 
 int	ft_toupper(int n)
 {
-	if (n >= 97 && n <= 122)
+	if (n >= 'a' && n <= 'z')
 	{
 		return (n - 32);
 	}
 	return (n);
 }
-// int main()
-// {
-//     char n;
-
-//     n = 'G';
-
-//     printf("%c",ft_toupper(n));
-// }

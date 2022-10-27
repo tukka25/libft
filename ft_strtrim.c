@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:53:09 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/17 23:06:08 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:03:31 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_string[len] = '\0';
 	return (new_string);
 }
-// #include <stdio.h>
-// int main(int argc, char **argv)
-// {
-// 	char *s1 = "  $ ? this is a fo a $  ? " ;
-// 	char *s2 =  "$? t";
-// 	char *ret = ft_strtrim(s1, s2);
-// 	printf("%s", ret);
-// }

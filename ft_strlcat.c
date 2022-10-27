@@ -6,7 +6,7 @@
 /*   By: abdamoha <abdamoha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:05:15 by abdamoha          #+#    #+#             */
-/*   Updated: 2022/10/20 16:30:09 by abdamoha         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:04:16 by abdamoha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = ft_strlen(dst) + ft_strlen(&src[i]);
 	return (i);
 }
-// #include <string.h>
-// int main()
-// {
-
-// 	// char dest[30]; memset(dest, 0, 30);
-// 	// char * src = (char *)"AAAAAAAAA";
-// 	// size_t size = 8;
-// 	char b[0xF] = "nyan !";
-
-// 	printf("%zu\n", strlcat(((void *)0), b, 0));
-// 	printf("%zu\n",ft_strlcat(((void *)0), b, 0));
-// 	// printf("%d",strcmp("", dest));
-// }
